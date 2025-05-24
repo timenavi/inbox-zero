@@ -76,16 +76,16 @@ export const useNavigation = () => {
         href: prefixPath(emailAccountId, "/automation"),
         icon: SparklesIcon,
       },
-      {
-        name: "Reply Zero",
-        href: prefixPath(emailAccountId, "/reply-zero"),
-        icon: MessageCircleReplyIcon,
-      },
-      {
-        name: "Cold Email Blocker",
-        href: prefixPath(emailAccountId, "/cold-email-blocker"),
-        icon: ShieldCheckIcon,
-      },
+      // {
+      //   name: "Reply Zero",
+      //   href: prefixPath(emailAccountId, "/reply-zero"),
+      //   icon: MessageCircleReplyIcon,
+      // },
+      // {
+      //   name: "Cold Email Blocker",
+      //   href: prefixPath(emailAccountId, "/cold-email-blocker"),
+      //   icon: ShieldCheckIcon,
+      // },
     ],
     [emailAccountId],
   );
@@ -136,7 +136,7 @@ const bottomLinks: NavItem[] = [
   // },
   {
     name: "Help Center",
-    href: "https://docs.getinboxzero.com",
+    href: "https://docs.replyai.ai",
     target: "_blank",
     icon: BookIcon,
   },

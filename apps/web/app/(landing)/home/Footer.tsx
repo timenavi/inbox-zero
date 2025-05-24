@@ -13,10 +13,10 @@ const navigation = {
   ],
   support: [
     { name: "Pricing", href: "/#pricing" },
-    { name: "Contact", href: "mailto:elie@getinboxzero.com", target: "_blank" },
+    { name: "Contact", href: "mailto:joshua@replyai.ai", target: "_blank" },
     {
       name: "Documentation",
-      href: "https://docs.getinboxzero.com",
+      href: "https://docs.replyai.ai",
       target: "_blank",
     },
     { name: "Feature Requests", href: "/feature-requests", target: "_blank" },
@@ -115,7 +115,8 @@ export function Footer() {
           ))}
         </div>
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          &copy; {new Date().getFullYear()} Inbox Zero. All rights reserved.
+          &copy; {new Date().getFullYear()} AI Email Writer. All rights
+          reserved.
         </p>
       </div>
     </footer>

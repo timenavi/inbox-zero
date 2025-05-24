@@ -12,7 +12,7 @@ async function getBlogPosts() {
     query: postSlugsQuery,
   });
   return posts.map((post) => ({
-    url: `https://www.getinboxzero.com/blog/post/${post.slug}`,
+    url: `https://replyai.ai/blog/post/${post.slug}`,
     lastModified: new Date(post.date),
   }));
 }
@@ -25,65 +25,65 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const staticUrls = [
     {
-      url: "https://www.getinboxzero.com/",
+      url: "https://replyai.ai/",
       priority: 1,
     },
     {
-      url: "https://www.getinboxzero.com/bulk-email-unsubscriber",
+      url: "https://replyai.ai/bulk-email-unsubscriber",
     },
     {
-      url: "https://www.getinboxzero.com/ai-automation",
+      url: "https://replyai.ai/ai-automation",
     },
     {
-      url: "https://www.getinboxzero.com/email-analytics",
+      url: "https://replyai.ai/email-analytics",
     },
     {
-      url: "https://www.getinboxzero.com/block-cold-emails",
+      url: "https://replyai.ai/block-cold-emails",
     },
     {
-      url: "https://www.getinboxzero.com/privacy",
+      url: "https://replyai.ai/privacy",
     },
     {
-      url: "https://www.getinboxzero.com/terms",
+      url: "https://replyai.ai/terms",
     },
     {
-      url: "https://www.getinboxzero.com/blog",
+      url: "https://replyai.ai/blog",
       changeFrequency: "daily",
       lastModified: new Date(),
       priority: 1,
     },
     {
-      url: "https://www.getinboxzero.com/blog/post/how-my-open-source-saas-hit-first-on-product-hunt",
+      url: "https://replyai.ai/blog/post/how-my-open-source-saas-hit-first-on-product-hunt",
     },
     {
-      url: "https://www.getinboxzero.com/blog/post/why-build-an-open-source-saas",
+      url: "https://replyai.ai/blog/post/why-build-an-open-source-saas",
     },
     {
-      url: "https://www.getinboxzero.com/blog/post/alternatives-to-skiff-mail",
+      url: "https://replyai.ai/blog/post/alternatives-to-skiff-mail",
     },
     {
-      url: "https://www.getinboxzero.com/blog/post/best-email-unsubscribe-app",
+      url: "https://replyai.ai/blog/post/best-email-unsubscribe-app",
     },
     {
-      url: "https://www.getinboxzero.com/blog/post/bulk-unsubscribe-from-emails",
+      url: "https://replyai.ai/blog/post/bulk-unsubscribe-from-emails",
     },
     {
-      url: "https://www.getinboxzero.com/blog/post/escape-email-trap-unsubscribe-for-good",
+      url: "https://replyai.ai/blog/post/escape-email-trap-unsubscribe-for-good",
     },
     {
-      url: "https://docs.getinboxzero.com/",
+      url: "https://docs.replyai.ai/",
     },
     {
-      url: "https://docs.getinboxzero.com/introduction",
+      url: "https://docs.replyai.ai/introduction",
     },
     {
-      url: "https://docs.getinboxzero.com/essentials/email-ai-automation",
+      url: "https://docs.replyai.ai/essentials/email-ai-automation",
     },
     {
-      url: "https://docs.getinboxzero.com/essentials/bulk-email-unsubscriber",
+      url: "https://docs.replyai.ai/essentials/bulk-email-unsubscriber",
     },
     {
-      url: "https://docs.getinboxzero.com/essentials/cold-email-blocker",
+      url: "https://docs.replyai.ai/essentials/cold-email-blocker",
     },
   ];
 

@@ -1,6 +1,6 @@
-# Inbox Zero MCP Server
+# AI Email Writer MCP Server
 
-An MCP server to manage your inbox efficiently. Use it within Cursor, Windsurf, or Claude desktop to interact with your Inbox Zero personal assistant.
+An MCP server to manage your inbox efficiently. Use it within Cursor, Windsurf, or Claude desktop to interact with your AI Email Writer personal assistant.
 
 ## Run it locally
 

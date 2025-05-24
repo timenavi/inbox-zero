@@ -80,11 +80,12 @@ export function AddAccount() {
                 <ul className="mb-2 mt-2 list-disc pl-5">
                   <li>
                     <b>Connect Account:</b> Add an account that you haven't yet
-                    added to Inbox Zero.
+                    added to AI Email Writer.
                   </li>
                   <li>
                     <b>Merge Another Account:</b> Sign in with a Google account
-                    that's currently linked to a *different* Inbox Zero user.
+                    that's currently linked to a *different* AI Email Writer
+                    user.
                   </li>
                 </ul>
               </DialogDescription>

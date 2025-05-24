@@ -122,13 +122,13 @@ export const env = createEnv({
     NEXT_PUBLIC_POSTHOG_API_HOST: z.string().optional(),
     NEXT_PUBLIC_POSTHOG_HERO_AB: z.string().optional(),
     NEXT_PUBLIC_POSTHOG_ONBOARDING_SURVEY_ID: z.string().optional(),
-    NEXT_PUBLIC_BASE_URL: z.string().default("https://www.getinboxzero.com"),
+    NEXT_PUBLIC_BASE_URL: z.string().default("https://replyai.ai"),
     NEXT_PUBLIC_CONTACTS_ENABLED: z.coerce.boolean().optional().default(false),
     NEXT_PUBLIC_SENTRY_DSN: z.string().optional(),
     NEXT_PUBLIC_SUPPORT_EMAIL: z
       .string()
       .optional()
-      .default("elie@getinboxzero.com"),
+      .default("joshua@replyai.ai"),
     NEXT_PUBLIC_GTM_ID: z.string().optional(),
     NEXT_PUBLIC_CRISP_WEBSITE_ID: z.string().optional(),
     NEXT_PUBLIC_WELCOME_UPGRADE_ENABLED: z.coerce
@@ -145,6 +145,7 @@ export const env = createEnv({
       .default("us.anthropic.claude-3-5-sonnet-20241022-v2:0"),
     NEXT_PUBLIC_OLLAMA_MODEL: z.string().optional(),
     NEXT_PUBLIC_APP_HOME_PATH: z.string().default("/setup"),
+    NEXT_PUBLIC_INTERCOM_APP_ID: z.string(),
   },
   // For Next.js >= 13.4.4, you only need to destructure client variables:
   experimental__runtimeEnv: {
@@ -199,5 +200,6 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_BEDROCK_ANTHROPIC_BACKUP_MODEL,
     NEXT_PUBLIC_OLLAMA_MODEL: process.env.NEXT_PUBLIC_OLLAMA_MODEL,
     NEXT_PUBLIC_APP_HOME_PATH: process.env.NEXT_PUBLIC_APP_HOME_PATH,
+    NEXT_PUBLIC_INTERCOM_APP_ID: process.env.NEXT_PUBLIC_INTERCOM_APP_ID,
   },
 });

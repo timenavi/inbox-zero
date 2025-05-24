@@ -60,11 +60,13 @@ export default async function AppLayout({
           <LastLogin email={session.user.email} />
         </Suspense>
         <Suspense>
-          <CrispWithNoSSR email={session.user.email} />
+          <IntercomWithNoSSR email={session.user.email} />
         </Suspense>
       </ErrorBoundary>
     </AppProviders>
   );
 }
 
-const CrispWithNoSSR = dynamic(() => import("@/components/CrispChat"));
+const IntercomWithNoSSR = dynamic(
+  () => import("@/replyai/components/IntercomChat"),
+);

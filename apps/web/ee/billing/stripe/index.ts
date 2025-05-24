@@ -12,9 +12,9 @@ export const getStripe = () => {
     stripe = new Stripe(env.STRIPE_SECRET_KEY, {
       apiVersion: "2025-04-30.basil",
       appInfo: {
-        name: "Inbox Zero",
+        name: "AI Email Writer",
         version: "1.0.0",
-        url: "https://www.getinboxzero.com",
+        url: "https://replyai.ai",
       },
       typescript: true,
     });

@@ -13,8 +13,8 @@ export default function PermissionsConsentPage() {
       </PageHeading>
 
       <TypographyP className="mx-auto mt-4 max-w-prose text-center">
-        You must sign in and give access to all permissions for Inbox Zero to
-        work.
+        You must sign in and give access to all permissions for AI Email Writer
+        to work.
       </TypographyP>
 
       <Button

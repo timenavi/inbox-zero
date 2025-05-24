@@ -37,7 +37,7 @@ export interface SummaryEmailProps {
 
 export default function SummaryEmail(props: SummaryEmailProps) {
   const {
-    baseUrl = "https://www.getinboxzero.com",
+    baseUrl = "https://replyai.ai",
     coldEmailers,
     pendingCount,
     needsReplyCount,
@@ -61,17 +61,17 @@ export default function SummaryEmail(props: SummaryEmailProps) {
             <Section className="p-8 text-center">
               <Link href={baseUrl} className="text-[15px]">
                 <Img
-                  src={"https://www.getinboxzero.com/icon.png"}
+                  src={"https://replyai.ai/icon.png"}
                   width="40"
                   height="40"
-                  alt="Inbox Zero"
+                  alt="AI Email Writer"
                   className="mx-auto my-0"
                 />
               </Link>
 
               <Text className="mx-0 mb-8 mt-4 p-0 text-center text-2xl font-normal">
                 <span className="font-semibold tracking-tighter">
-                  Inbox Zero
+                  AI Email Writer
                 </span>
               </Text>
 
@@ -106,7 +106,7 @@ export default function SummaryEmail(props: SummaryEmailProps) {
 }
 
 SummaryEmail.PreviewProps = {
-  baseUrl: "https://www.getinboxzero.com",
+  baseUrl: "https://replyai.ai",
   pendingCount: 23,
   coldEmailers: [
     {
@@ -345,7 +345,7 @@ function Footer({
   return (
     <Section>
       <Text>
-        You're receiving this email because you're subscribed to Inbox Zero
+        You're receiving this email because you're subscribed to AI Email Writer
         stats updates. You can change this in your{" "}
         <Link
           href={`${baseUrl}/settings#email-updates`}

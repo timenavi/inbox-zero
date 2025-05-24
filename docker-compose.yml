@@ -9,7 +9,7 @@ services:
       - POSTGRES_DB=${POSTGRES_DB:-inboxzero}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-password}
     volumes:
-      - database-data:/var/lib/postgresql/data/
+      - database-data-inboxzero:/var/lib/postgresql/data/
     ports:
       - ${POSTGRES_PORT:-5432}:5432
     networks:
@@ -20,7 +20,7 @@ services:
     ports:
       - ${REDIS_PORT:-6380}:6379
     volumes:
-      - database-data:/data
+      - database-data-inboxzero:/data
     networks:
       - inbox-zero-network
 
@@ -61,7 +61,6 @@ services:
       UPSTASH_REDIS_TOKEN: "${UPSTASH_REDIS_TOKEN}"
 
 volumes:
-  database-data:
-
+  database-data-inboxzero:
 networks:
   inbox-zero-network:

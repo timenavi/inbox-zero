@@ -1,5 +1,5 @@
-name: "Build Inbox Zero Docker Image"
-run-name: "Build Inbox Zero Docker Image"
+name: "Build AI Email Writer Docker Image"
+run-name: "Build AI Email Writer Docker Image"
 
 on:
   push:
@@ -74,7 +74,7 @@ jobs:
           NEW_VERSION: ${{ steps.update_version.outputs.new_version }}
         run: |
           echo "$NEW_VERSION" > version.txt
-          git config --local user.email "github-actions@getinboxzero.com"
+          git config --local user.email "github-actions@replyai.ai"
           git config --local user.name "github-actions"
           git tag -a "$VERSION" -m "Release version $VERSION"
           git commit -a -m "Bump version from $VERSION to $NEW_VERSION"

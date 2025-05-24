@@ -45,7 +45,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
-        hostname: "images.getinboxzero.com",
+        hostname: "images.replyai.ai",
       },
     ],
   },
@@ -97,58 +97,57 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/feature-requests",
-        destination: "https://inboxzero.featurebase.app",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/feedback",
-        destination: "https://inboxzero.featurebase.app",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/roadmap",
-        destination: "https://inboxzero.featurebase.app/roadmap",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/changelog",
-        destination: "https://inboxzero.featurebase.app/changelog",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/twitter",
-        destination: "https://twitter.com/inboxzero_ai",
+        destination: "https://twitter.com/getreplyai",
         permanent: true,
       },
       {
         source: "/github",
-        destination: "https://github.com/elie222/inbox-zero",
+        destination: "https://github.com/timenavi/inbox-zero",
         permanent: true,
       },
       {
         source: "/discord",
-        destination: "https://discord.gg/UnBwsydrug",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/linkedin",
-        destination: "https://www.linkedin.com/company/inbox-zero-ai/",
+        destination: "https://www.linkedin.com/company/replyai/",
         permanent: true,
       },
       {
         source: "/waitlist",
-        destination: "https://airtable.com/shr7HNx6FXaIxR5q6",
+        destination: "/",
         permanent: true,
       },
       {
         source: "/waitlist-other",
-        destination:
-          "https://airtable.com/applHl6PVBOa0Q8gD/pagRqrxRK1TChsAMp/form",
+        destination: "/",
         permanent: false,
       },
       {
         source: "/affiliates",
-        destination: "https://inboxzero.lemonsqueezy.com/affiliates",
+        destination: "/",
         permanent: true,
       },
       {
@@ -227,6 +226,10 @@ const nextConfig: NextConfig = {
               "frame-src 'self' https:",
               // Prevent embedding in iframes
               "frame-ancestors 'none'",
+              // Intercom
+              "child-src 'self' https:",
+              "form-action 'self' https:",
+              "media-src 'self' https:",
             ].join("; "),
           },
           {

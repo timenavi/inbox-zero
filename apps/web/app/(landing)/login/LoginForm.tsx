@@ -75,13 +75,13 @@ export function LoginForm() {
         </DialogContent>
       </Dialog>
 
-      <Button
+      {/* <Button
         color="white"
         size="2xl"
         link={{ href: "/waitlist-other", target: "_blank" }}
       >
         Join the Outlook waitlist
-      </Button>
+      </Button> */}
     </div>
   );
 }

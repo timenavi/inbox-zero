@@ -42,9 +42,7 @@ export function Hero(props: {
       <div className="pt-24 sm:pb-12 sm:pt-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           {/* <HeroTag /> */}
-          <div className="mb-10">
-            <ProductHuntBadge />
-          </div>
+          <div className="mb-10">{/* <ProductHuntBadge /> */}</div>
 
           <div className="mx-auto max-w-xl text-center">
             <HeroText>

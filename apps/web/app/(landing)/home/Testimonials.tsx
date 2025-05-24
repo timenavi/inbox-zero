@@ -21,16 +21,6 @@ const featuredTestimonial = {
   },
 };
 
-const stevenTestimonial: Testimonial = {
-  body: "Love this new open-source app by @elie2222: replyai.ai",
-  author: {
-    name: "Steven Tey",
-    handle: "steventey",
-    imageUrl:
-      "https://pbs.twimg.com/profile_images/1506792347840888834/dS-r50Je_400x400.jpg",
-  },
-};
-
 const vinayTestimonial: Testimonial = {
   body: "this is something I've been searching for a long time – thanks for building it.",
   author: {
@@ -53,7 +43,6 @@ const yoniTestimonial: Testimonial = {
 const desktopTestimonials: Testimonial[][][] = [
   [
     [
-      stevenTestimonial,
       {
         body: "hey bro, your tool is legit what I been looking for for ages haha. its a god send",
         author: {
@@ -112,11 +101,7 @@ const desktopTestimonials: Testimonial[][][] = [
   ],
 ];
 
-const mobileTestimonials: Testimonial[] = [
-  vinayTestimonial,
-  stevenTestimonial,
-  yoniTestimonial,
-];
+const mobileTestimonials: Testimonial[] = [vinayTestimonial, yoniTestimonial];
 
 export function Testimonials() {
   return (

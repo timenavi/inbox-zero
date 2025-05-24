@@ -25,10 +25,10 @@ const navigation = {
   ],
   company: [
     { name: "Blog", href: "/blog" },
-    { name: "Affiliates", href: "/affiliates", target: "_blank" },
+    // { name: "Affiliates", href: "/affiliates", target: "_blank" },
     { name: "Twitter", href: "/twitter", target: "_blank" },
     { name: "GitHub", href: "/github", target: "_blank" },
-    { name: "Discord", href: "/discord", target: "_blank" },
+    // { name: "Discord", href: "/discord", target: "_blank" },
   ],
   legal: [
     { name: "Terms", href: "/terms" },

@@ -14,10 +14,7 @@ const IntercomChat = ({ email }: { email?: string }) => {
   useEffect(() => {
     if (!env.NEXT_PUBLIC_INTERCOM_APP_ID) return;
 
-    boot({
-      appId: env.NEXT_PUBLIC_INTERCOM_APP_ID,
-      hide_default_launcher: false,
-    });
+    boot({});
     setIsConfigured(true);
 
     return () => {

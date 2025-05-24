@@ -36,7 +36,7 @@ const sendEmail = async ({
     react,
     text,
     headers: {
-      "List-Unsubscribe": `<https://replyai.ai/api/unsubscribe?token=${unsubscribeToken}>`,
+      "List-Unsubscribe": `<https://app.replyai.ai/api/unsubscribe?token=${unsubscribeToken}>`,
       // From Feb 2024 Google requires this for bulk senders
       "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
       // Prevent threading on Gmail

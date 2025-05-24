@@ -14,7 +14,7 @@ export const getStripe = () => {
       appInfo: {
         name: "AI Email Writer",
         version: "1.0.0",
-        url: "https://replyai.ai",
+        url: "https://app.replyai.ai",
       },
       typescript: true,
     });

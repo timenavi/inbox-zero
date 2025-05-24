@@ -87,7 +87,7 @@ function selectModel(
       const openrouter = createOpenRouter({
         apiKey: aiApiKey || env.OPENROUTER_API_KEY,
         headers: {
-          "HTTP-Referer": "https://replyai.ai",
+          "HTTP-Referer": "https://app.replyai.ai",
           "X-Title": "AI Email Writer",
         },
       });

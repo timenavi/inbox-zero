@@ -1,15 +1,15 @@
-[![](apps/web/app/opengraph-image.png)](https://replyai.ai)
+[![](apps/web/app/opengraph-image.png)](https://app.replyai.ai)
 
 <p align="center">
-  <a href="https://replyai.ai">
+  <a href="https://app.replyai.ai">
     <h1 align="center">AI Email Writer - Your AI Email Assistant</h1>
   </a>
   <p align="center">
     Open source email app to reach inbox zero fast.
     <br />
-    <a href="https://replyai.ai">Website</a>
+    <a href="https://app.replyai.ai">Website</a>
     ·
-    <a href="https://replyai.ai/discord">Discord</a>
+    <a href="https://app.replyai.ai/discord">Discord</a>
     ·
     <a href="https://github.com/elie222/inbox-zero/issues">Issues</a>
   </p>
@@ -66,11 +66,11 @@ Learn more in our [docs](https://docs.replyai.ai).
 
 ## Feature Requests
 
-To request a feature open a [GitHub issue](https://github.com/elie222/inbox-zero/issues), or join our [Discord](https://replyai.ai/discord).
+To request a feature open a [GitHub issue](https://github.com/elie222/inbox-zero/issues), or join our [Discord](https://app.replyai.ai/discord).
 
 ## Getting Started for Developers
 
-We offer a hosted version of AI Email Writer at [https://replyai.ai](https://replyai.ai). To self-host follow the steps below.
+We offer a hosted version of AI Email Writer at [https://app.replyai.ai](https://app.replyai.ai). To self-host follow the steps below.
 
 ### Setup
 
@@ -250,7 +250,7 @@ Follow instructions [here](https://developers.google.com/gmail/api/guides/push).
 3. [Grant publish rights on your topic](https://developers.google.com/gmail/api/guides/push#grant_publish_rights_on_your_topic)
 
 Set env var `GOOGLE_PUBSUB_TOPIC_NAME`.
-When creating the subscription select Push and the url should look something like: `https://replyai.ai/api/google/webhook?token=TOKEN` or `https://abc.ngrok-free.app/api/google/webhook?token=TOKEN` where the domain is your domain. Set `GOOGLE_PUBSUB_VERIFICATION_TOKEN` in your `.env` file to be the value of `TOKEN`.
+When creating the subscription select Push and the url should look something like: `https://app.replyai.ai/api/google/webhook?token=TOKEN` or `https://abc.ngrok-free.app/api/google/webhook?token=TOKEN` where the domain is your domain. Set `GOOGLE_PUBSUB_VERIFICATION_TOKEN` in your `.env` file to be the value of `TOKEN`.
 
 To run in development ngrok can be helpful:
 
@@ -291,6 +291,6 @@ The Google watch is necessary. Others are optional.
 ### Contributing to the project
 
 You can view open tasks in our [GitHub Issues](https://github.com/elie222/inbox-zero/issues).
-Join our [Discord](https://replyai.ai/discord) to discuss tasks and check what's being worked on.
+Join our [Discord](https://app.replyai.ai/discord) to discuss tasks and check what's being worked on.
 
 [ARCHITECTURE.md](./ARCHITECTURE.md) explains the architecture of the project (LLM generated).

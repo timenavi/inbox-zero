@@ -37,7 +37,7 @@ export interface SummaryEmailProps {
 
 export default function SummaryEmail(props: SummaryEmailProps) {
   const {
-    baseUrl = "https://replyai.ai",
+    baseUrl = "https://app.replyai.ai",
     coldEmailers,
     pendingCount,
     needsReplyCount,
@@ -61,7 +61,7 @@ export default function SummaryEmail(props: SummaryEmailProps) {
             <Section className="p-8 text-center">
               <Link href={baseUrl} className="text-[15px]">
                 <Img
-                  src={"https://replyai.ai/icon.png"}
+                  src={"https://app.replyai.ai/icon.png"}
                   width="40"
                   height="40"
                   alt="AI Email Writer"
@@ -106,7 +106,7 @@ export default function SummaryEmail(props: SummaryEmailProps) {
 }
 
 SummaryEmail.PreviewProps = {
-  baseUrl: "https://replyai.ai",
+  baseUrl: "https://app.replyai.ai",
   pendingCount: 23,
   coldEmailers: [
     {

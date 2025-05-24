@@ -52,6 +52,14 @@ export async function syncStripeDataToDb({
     const subscription = subscriptions.data[0];
     const subscriptionItem = subscription.items.data[0];
 
+    if (subscription.metadata?.app !== "REPLYAI-INBOX") {
+      logger.info("Skipping sync for non-REPLYAI-INBOX subscription", {
+        customerId,
+        subscriptionId: subscription.id,
+      });
+      return;
+    }
+
     if (!subscriptionItem.price || typeof subscriptionItem.price !== "object") {
       logger.error("Subscription item price data is missing or not an object", {
         customerId,

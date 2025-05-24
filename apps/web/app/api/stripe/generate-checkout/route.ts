@@ -60,6 +60,11 @@ export const GET = withAuth(async (request) => {
   const checkout = await stripe.checkout.sessions.create({
     customer: stripeCustomerId,
     success_url: `${env.NEXT_PUBLIC_BASE_URL}/api/stripe/success`,
+    subscription_data: {
+      metadata: {
+        app: "REPLYAI-INBOX",
+      },
+    },
   });
 
   after(() => trackStripeCheckoutCreated(user.email));

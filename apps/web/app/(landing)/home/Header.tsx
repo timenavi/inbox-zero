@@ -48,8 +48,7 @@ export function Header({ className }: { className?: string }) {
             <Link
               key={item.name}
               href={item.href}
-              target={item.target}
-              prefetch={item.target !== "_blank"}
+              prefetch={true}
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               {item.name}

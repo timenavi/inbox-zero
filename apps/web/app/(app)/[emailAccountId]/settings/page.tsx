@@ -51,10 +51,10 @@ export default function SettingsPage(_props: {
       </TabsContent>
       <TabsContent value="user">
         <FormWrapper>
-          <ModelSection />
+          {/* <ModelSection /> */}
           <MultiAccountSection />
-          <WebhookSection />
-          <ApiKeysSection />
+          {/* <WebhookSection /> */}
+          {/* <ApiKeysSection /> */}
           <DeleteSection />
         </FormWrapper>
       </TabsContent>

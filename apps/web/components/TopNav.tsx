@@ -44,11 +44,11 @@ function ProfileDropdown() {
   const { emailAccountId, emailAccount } = useAccount();
 
   const userNavigation = [
-    {
-      name: "Usage",
-      href: prefixPath(emailAccountId, "/usage"),
-      icon: BarChartIcon,
-    },
+    // {
+    //   name: "Usage",
+    //   href: prefixPath(emailAccountId, "/usage"),
+    //   icon: BarChartIcon,
+    // },
     {
       name: "Sign out",
       href: "#",

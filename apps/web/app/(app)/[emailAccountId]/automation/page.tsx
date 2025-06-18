@@ -51,11 +51,11 @@ export default async function AutomationPage({
       <Suspense>
         <PermissionsCheck />
 
-        <Tabs defaultValue="prompt">
+        <Tabs defaultValue="rules">
           <TabsToolbar>
             <div className="w-full overflow-x-auto">
               <TabsList>
-                <TabsTrigger value="prompt">Prompt</TabsTrigger>
+                {/* <TabsTrigger value="prompt">Prompt</TabsTrigger> */}
                 <TabsTrigger value="rules">Rules</TabsTrigger>
                 <TabsTrigger value="test">Test</TabsTrigger>
                 <TabsTrigger value="history">History</TabsTrigger>
@@ -82,9 +82,9 @@ export default async function AutomationPage({
             </div>
           </TabsToolbar>
 
-          <TabsContent value="prompt" className="content-container mb-10">
+          {/* <TabsContent value="prompt" className="content-container mb-10">
             <RulesPrompt />
-          </TabsContent>
+          </TabsContent> */}
           <TabsContent value="rules" className="content-container mb-10">
             <Rules />
           </TabsContent>

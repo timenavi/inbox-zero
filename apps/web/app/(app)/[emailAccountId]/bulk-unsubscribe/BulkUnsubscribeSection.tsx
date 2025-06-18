@@ -133,14 +133,14 @@ export function BulkUnsubscribeSection({
   const { selected, isAllSelected, onToggleSelect, onToggleSelectAll } =
     useToggleSelect(rows?.map((item) => ({ id: item.name })) || []);
 
-  const unsortedTableRows = rows?.map((item) => {
+  const unsortedTableRows = rows?.map((item, rowIndex) => {
     const readPercentage = (item.readEmails / item.value) * 100;
     const archivedEmails = item.value - item.inboxEmails;
     const archivedPercentage = (archivedEmails / item.value) * 100;
 
     const row = (
       <RowComponent
-        key={item.name}
+        key={`${item.name}-${rowIndex}`}
         item={item}
         userEmail={userEmail}
         emailAccountId={emailAccountId}

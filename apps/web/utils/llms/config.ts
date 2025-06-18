@@ -16,6 +16,8 @@ export const Provider = {
 export const Model = {
   GPT_4O: "gpt-4o",
   GPT_4O_MINI: "gpt-4o-mini",
+  GPT_4_1_MINI: "gpt-4.1-mini",
+  O4_MINI: "o4-mini",
   CLAUDE_3_7_SONNET_BEDROCK: env.NEXT_PUBLIC_BEDROCK_SONNET_MODEL,
   // BEDROCK_ANTHROPIC_BACKUP_MODEL:
   //   env.NEXT_PUBLIC_BEDROCK_ANTHROPIC_BACKUP_MODEL,
@@ -48,8 +50,10 @@ export const providerOptions: { label: string; value: string }[] = [
 export const modelOptions: Record<string, { label: string; value: string }[]> =
   {
     [Provider.OPEN_AI]: [
-      { label: "GPT-4o", value: Model.GPT_4O },
-      { label: "GPT-4o Mini", value: Model.GPT_4O_MINI },
+      { label: "gpt-4o", value: Model.GPT_4O },
+      { label: "gpt-4o-mini", value: Model.GPT_4O_MINI },
+      { label: "o4-mini", value: Model.O4_MINI },
+      { label: "gpt-4.1-mini", value: Model.GPT_4_1_MINI },
     ],
     [Provider.ANTHROPIC]: [
       {

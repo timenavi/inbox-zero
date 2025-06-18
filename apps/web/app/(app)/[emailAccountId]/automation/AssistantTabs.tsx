@@ -70,9 +70,9 @@ export function AssistantTabs() {
           </div>
         </TabsContent>
 
-        <TabsContent value="prompt" className="mt-0 h-full">
+        {/* <TabsContent value="prompt" className="mt-0 h-full">
           <RulesPrompt />
-        </TabsContent>
+        </TabsContent> */}
         <TabsContent value="rules" className="content-container mb-10">
           <Rules />
         </TabsContent>

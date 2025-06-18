@@ -81,16 +81,6 @@ export const useNavigation = () => {
         href: prefixPath(emailAccountId, "/stats"),
         icon: BarChartBigIcon,
       },
-      // {
-      //   name: "Reply Zero",
-      //   href: prefixPath(emailAccountId, "/reply-zero"),
-      //   icon: MessageCircleReplyIcon,
-      // },
-      // {
-      //   name: "Cold Email Blocker",
-      //   href: prefixPath(emailAccountId, "/cold-email-blocker"),
-      //   icon: ShieldCheckIcon,
-      // },
     ],
     [emailAccountId],
   );

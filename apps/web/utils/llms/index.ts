@@ -64,15 +64,15 @@ export async function chatCompletion({
       ...commonOptions,
     });
 
-    if (result.usage) {
-      await saveAiUsage({
-        email: userEmail,
-        usage: result.usage,
-        provider,
-        model,
-        label: usageLabel,
-      });
-    }
+    // if (result.usage) {
+    //   await saveAiUsage({
+    //     email: userEmail,
+    //     usage: result.usage,
+    //     provider,
+    //     model,
+    //     label: usageLabel,
+    //   });
+    // }
 
     return result;
   } catch (error) {
@@ -132,15 +132,17 @@ async function chatCompletionObjectInternal<T>({
       ...commonOptions,
     });
 
-    if (result.usage) {
-      await saveAiUsage({
-        email: userEmail,
-        usage: result.usage,
-        provider,
-        model,
-        label: usageLabel,
-      });
-    }
+    console.log("result", result);
+
+    // if (result.usage) {
+    //   await saveAiUsage({
+    //     email: userEmail,
+    //     usage: result.usage,
+    //     provider,
+    //     model,
+    //     label: usageLabel,
+    //   });
+    // }
 
     return result;
   } catch (error) {
@@ -195,13 +197,13 @@ export async function chatCompletionStream({
     experimental_transform: smoothStream({ chunking: "word" }),
     onStepFinish,
     onFinish: async (result) => {
-      await saveAiUsage({
-        email: userEmail,
-        provider,
-        model,
-        usage: result.usage,
-        label,
-      });
+      // await saveAiUsage({
+      //   email: userEmail,
+      //   provider,
+      //   model,
+      //   usage: result.usage,
+      //   label,
+      // });
 
       if (onFinish) await onFinish(result);
     },
@@ -264,13 +266,13 @@ async function chatCompletionToolsInternal({
     });
 
     if (result.usage) {
-      await saveAiUsage({
-        email: userEmail,
-        usage: result.usage,
-        provider,
-        model,
-        label,
-      });
+      // await saveAiUsage({
+      //   email: userEmail,
+      //   usage: result.usage,
+      //   provider,
+      //   model,
+      //   label,
+      // });
     }
 
     return result;
@@ -317,13 +319,13 @@ async function streamCompletionTools({
     providerOptions,
     ...commonOptions,
     onFinish: async ({ usage, text }) => {
-      await saveAiUsage({
-        email: userEmail,
-        provider,
-        model,
-        usage,
-        label,
-      });
+      // await saveAiUsage({
+      //   email: userEmail,
+      //   provider,
+      //   model,
+      //   usage,
+      //   label,
+      // });
 
       if (onFinish) await onFinish(text);
     },

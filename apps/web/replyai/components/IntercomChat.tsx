@@ -32,12 +32,6 @@ const IntercomChat = ({ email }: { email?: string }) => {
 
   useEffect(() => {
     if (!env.NEXT_PUBLIC_INTERCOM_APP_ID || !isConfigured) return;
-
-    if (pathname.includes("/automation") || pathname.includes("/reply-zero")) {
-      hide();
-    } else {
-      show();
-    }
   }, [pathname, isConfigured, hide, show]);
 
   return null;

@@ -48,7 +48,7 @@ function selectModel(
 } {
   switch (aiProvider) {
     case Provider.OPEN_AI: {
-      const model = aiModel || Model.GPT_4O;
+      const model = aiModel || Model.GPT_4_1_MINI;
       return {
         provider: Provider.OPEN_AI,
         model,

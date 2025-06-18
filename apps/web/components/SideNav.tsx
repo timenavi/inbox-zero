@@ -7,26 +7,23 @@ import {
   AlertCircleIcon,
   ArchiveIcon,
   ArrowLeftIcon,
-  BarChartBigIcon,
   BookIcon,
-  BrushIcon,
   ChevronDownIcon,
   ChevronRightIcon,
   CogIcon,
   CrownIcon,
   FileIcon,
+  HistoryIcon,
   InboxIcon,
   type LucideIcon,
-  MailsIcon,
-  MessageCircleReplyIcon,
   MessagesSquareIcon,
   PenIcon,
   PersonStandingIcon,
   RatioIcon,
   SendIcon,
-  ShieldCheckIcon,
   SparklesIcon,
   TagIcon,
+  TestTubeIcon,
   Users2Icon,
 } from "lucide-react";
 import { Logo } from "@/components/Logo";
@@ -49,7 +46,6 @@ import { CommandShortcut } from "@/components/ui/command";
 import { useSplitLabels } from "@/hooks/useLabels";
 import { LoadingContent } from "@/components/LoadingContent";
 import { useCleanerEnabled } from "@/hooks/useFeatureFlags";
-import { ClientOnly } from "@/components/ClientOnly";
 import { AccountSwitcher } from "@/components/AccountSwitcher";
 import { useAccount } from "@/providers/EmailAccountProvider";
 import { prefixPath } from "@/utils/path";
@@ -72,15 +68,30 @@ export const useNavigation = () => {
   const assistantItems: NavItem[] = useMemo(
     () => [
       {
-        name: "Personal Assistant",
-        href: prefixPath(emailAccountId, "/automation"),
+        name: "Manage Rules",
+        href: prefixPath(emailAccountId, "/automation?tab=rules"),
         icon: SparklesIcon,
       },
       {
-        name: "Analytics",
-        href: prefixPath(emailAccountId, "/stats"),
-        icon: BarChartBigIcon,
+        name: "Test Rules",
+        href: prefixPath(emailAccountId, "/automation?tab=test"),
+        icon: TestTubeIcon,
       },
+      {
+        name: "History",
+        href: prefixPath(emailAccountId, "/automation?tab=history"),
+        icon: HistoryIcon,
+      },
+      {
+        name: "Knowledge Base",
+        href: prefixPath(emailAccountId, "/automation?tab=knowledge"),
+        icon: BookIcon,
+      },
+      // {
+      //   name: "Analytics",
+      //   href: prefixPath(emailAccountId, "/stats"),
+      //   icon: BarChartBigIcon,
+      // },
     ],
     [emailAccountId],
   );
@@ -88,16 +99,16 @@ export const useNavigation = () => {
   // Clean category items
   const cleanItems: NavItem[] = useMemo(
     () => [
-      {
-        name: "Bulk Unsubscribe",
-        href: prefixPath(emailAccountId, "/bulk-unsubscribe"),
-        icon: MailsIcon,
-      },
-      {
-        name: "Deep Clean",
-        href: prefixPath(emailAccountId, "/clean"),
-        icon: BrushIcon,
-      },
+      // {
+      //   name: "Bulk Unsubscribe",
+      //   href: prefixPath(emailAccountId, "/bulk-unsubscribe"),
+      //   icon: MailsIcon,
+      // },
+      // {
+      //   name: "Deep Clean",
+      //   href: prefixPath(emailAccountId, "/clean"),
+      //   icon: BrushIcon,
+      // },
     ],
     [emailAccountId],
   );
@@ -275,7 +286,7 @@ export function SideNav({ ...props }: React.ComponentProps<typeof Sidebar>) {
                   activeHref={path}
                 />
               </SidebarGroup>
-              <SidebarGroup>
+              {/* <SidebarGroup>
                 <SidebarGroupLabel>Tools</SidebarGroupLabel>
                 <ClientOnly>
                   <SideNavMenu
@@ -283,7 +294,7 @@ export function SideNav({ ...props }: React.ComponentProps<typeof Sidebar>) {
                     activeHref={path}
                   />
                 </ClientOnly>
-              </SidebarGroup>
+              </SidebarGroup> */}
             </>
           )}
         </SidebarGroupContent>

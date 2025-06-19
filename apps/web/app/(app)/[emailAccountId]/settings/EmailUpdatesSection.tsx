@@ -59,6 +59,8 @@ function SummaryUpdateSectionForm({
     async (data) => {
       const res = await updateEmailSettingsAction(emailAccountId, data);
 
+      console.log("res", res);
+
       if (res?.serverError) {
         toastError({
           description: "There was an error updating the settings.",

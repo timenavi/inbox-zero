@@ -15,6 +15,9 @@ import { TabsToolbar } from "@/components/TabsToolbar";
 import { GmailProvider } from "@/providers/GmailProvider";
 import { ASSISTANT_ONBOARDING_COOKIE } from "@/utils/cookies";
 import { prefixPath } from "@/utils/path";
+import { Button } from "@/components/ui/button";
+import { PlusIcon, SlidersIcon } from "lucide-react";
+import Link from "next/link";
 
 export const maxDuration = 300; // Applies to the actions
 
@@ -69,16 +72,22 @@ export default async function AutomationPage({
             </div>
 
             <div className="flex items-center gap-2">
-              <OnboardingModal
-                title="Getting started with AI Personal Assistant"
-                description={
-                  <>
-                    Learn how to use the AI Personal Assistant to automatically
-                    label, archive, and more.
-                  </>
-                }
-                videoId="SoeNDVr7ve4"
-              />
+              <Button asChild variant="outline">
+                <Link
+                  href={prefixPath(emailAccountId, "/automation/onboarding")}
+                >
+                  <SlidersIcon className="mr-2 hidden size-4 md:block" />
+                  View Setup
+                </Link>
+              </Button>
+              <Button asChild variant="default">
+                <Link
+                  href={prefixPath(emailAccountId, "/automation/rule/create")}
+                >
+                  <PlusIcon className="mr-2 hidden size-4 md:block" />
+                  Add Rule
+                </Link>
+              </Button>
             </div>
           </TabsToolbar>
 

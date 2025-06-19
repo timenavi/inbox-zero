@@ -26,7 +26,7 @@ export function Usage(props: {
               premium?.lemonSqueezyRenewsAt || null,
               premium?.stripeSubscriptionStatus || null,
             )
-              ? "Unlimited"
+              ? "Lots of"
               : formatStat(
                   premium?.unsubscribeCredits ??
                     env.NEXT_PUBLIC_FREE_UNSUBSCRIBE_CREDITS,

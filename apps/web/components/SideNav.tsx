@@ -68,7 +68,7 @@ export const useNavigation = () => {
   const assistantItems: NavItem[] = useMemo(
     () => [
       {
-        name: "Manage Rules",
+        name: "AI Assistant",
         href: prefixPath(emailAccountId, "/automation?tab=rules"),
         icon: SparklesIcon,
       },

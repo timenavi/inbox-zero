@@ -55,6 +55,7 @@ import { useAction } from "next-safe-action/hooks";
 import { useAccount } from "@/providers/EmailAccountProvider";
 import { prefixPath } from "@/utils/path";
 import { ExpandableText } from "@/components/ExpandableText";
+import { OnboardingModal } from "@/components/OnboardingModal";
 
 export function Rules({ size = "md" }: { size?: "sm" | "md" }) {
   const { data, isLoading, error, mutate } = useRules();
@@ -289,19 +290,16 @@ export function Rules({ size = "md" }: { size?: "sm" | "md" }) {
               Add Rule via Prompt
             </Link>
           </Button> */}
-          <Button asChild variant="outline">
-            <Link href={prefixPath(emailAccountId, "/automation/onboarding")}>
-              <SlidersIcon className="mr-2 hidden size-4 md:block" />
-              View Setup
-            </Link>
-          </Button>
-
-          <Button asChild variant="outline">
-            <Link href={prefixPath(emailAccountId, "/automation/rule/create")}>
-              <PlusIcon className="mr-2 hidden size-4 md:block" />
-              Add Rule Manually
-            </Link>
-          </Button>
+          <OnboardingModal
+            title="Getting started with AI Personal Assistant"
+            description={
+              <>
+                Learn how to use the AI Personal Assistant to automatically
+                label, archive, and more.
+              </>
+            }
+            videoId="SoeNDVr7ve4"
+          />
         </div>
       )}
     </div>
@@ -353,7 +351,7 @@ function NoRules() {
       <CardContent>
         <Button type="button" variant="outline" asChild>
           <Link href={prefixPath(emailAccountId, "/automation/rule/create")}>
-            Add Rule Manually
+            Add Rule
           </Link>
         </Button>
       </CardContent>

@@ -203,10 +203,7 @@ const businessTier: Tier = {
   features: [
     aiAssistantFeature,
     replyZeroFeature,
-    coldEmailBlockerFeature,
-    bulkUnsubscribeFeature,
-    analyticsFeature,
-    { text: "Unlimited AI credits" },
+    { text: "Lots of AI credits" },
     {
       text: "Basic Knowledge Base",
       tooltip:
@@ -243,9 +240,6 @@ const businessPlusTier: Tier = {
   features: [
     aiAssistantFeature,
     replyZeroFeature,
-    coldEmailBlockerFeature,
-    bulkUnsubscribeFeature,
-    analyticsFeature,
     { text: "Unlimited AI credits" },
     {
       text: "Unlimited Knowledge Base",
@@ -253,11 +247,6 @@ const businessPlusTier: Tier = {
         "The knowledge base is used to help draft responses. Store up to unlimited content in your knowledge base.",
     },
     { text: "Priority support" },
-    {
-      text: "Dedicated onboarding manager",
-      tooltip:
-        "We'll help you get set up on an onboarding call. Book as many free calls as needed.",
-    },
   ],
   cta: "Try free for 7 days",
   mostPopular: true,
